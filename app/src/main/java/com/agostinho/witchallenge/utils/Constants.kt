@@ -4,7 +4,7 @@ import com.agostinho.witchallenge.BuildConfig
 
 
 const val API_KEY = BuildConfig.API_KEY
-const val BASE_URL = "https://api.openweathermap.org/data/2.5/"
+const val BASE_API = "https://api.openweathermap.org/data/2.5/"
 
 
 const val WEATHER_RESULT = "weather_result"
