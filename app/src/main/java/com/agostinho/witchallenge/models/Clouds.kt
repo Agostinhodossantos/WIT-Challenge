@@ -1,5 +1,7 @@
 package com.agostinho.witchallenge.models
 
+import com.google.gson.annotations.SerializedName
+
 data class Clouds (
-    val all: String
+    @SerializedName("all") val all: String
 )
