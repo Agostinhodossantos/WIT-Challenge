@@ -1,8 +1,9 @@
 package com.agostinho.witchallenge.models
 
+import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 data class Wind (
-    @SerializedName("speed") val speed: Double,
-    @SerializedName("deg") val deg: Int
+    @Expose @SerializedName("speed") val speed: Double,
+    @Expose @SerializedName("deg") val deg: Int
 )

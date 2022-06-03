@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_default">10dp</dimen>
+    <dimen name="card_height">100dp</dimen>
+    <dimen name="top_margin">30dp</dimen>
+    <dimen name="weather_title_size">50sp</dimen>
+    <dimen name="img_margin_size">70dp</dimen>
+</resources>
