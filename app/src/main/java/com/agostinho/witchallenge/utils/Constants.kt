@@ -4,6 +4,7 @@ import com.agostinho.witchallenge.BuildConfig
 
 
 const val API_KEY = BuildConfig.API_KEY
+//const val BASE_API = "https://api.openweathermap.org/data/2.5/"
 const val BASE_API = "https://api.openweathermap.org/data/2.5/"
 
 
@@ -21,3 +22,4 @@ val EUROPEAN_CITIES_LIST = mapOf(
     "COPENHAGEN" to 2618425,
     "MOSCOW" to 524901,
 ).values.joinToString(  separator = ",",)
+
