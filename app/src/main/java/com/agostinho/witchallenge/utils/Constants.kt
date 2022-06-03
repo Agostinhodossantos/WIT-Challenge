@@ -7,7 +7,7 @@ const val API_KEY = BuildConfig.API_KEY
 const val BASE_API = "https://api.openweathermap.org/data/2.5/"
 
 
-const val WEATHER_INTENT = "weather_result"
+const val WEATHER_INTENT = "weather"
 const val UNITS_METRIC = "metric"
 
 const val MY_CITY = "Maputo"

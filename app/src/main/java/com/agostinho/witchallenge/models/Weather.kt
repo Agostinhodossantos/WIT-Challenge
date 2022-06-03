@@ -9,5 +9,6 @@ data class Weather(
     @Expose @SerializedName("description") val description: String,
     @Expose @SerializedName("icon") val icon: String
 ) {
-
+    val getIconUrlLarge get() = "https://openweathermap.org/img/wn/$icon@2x.png"
+    val getIconUrlMedium get() = "https://openweathermap.org/img/w/$icon.png"
 }

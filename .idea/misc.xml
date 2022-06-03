@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bg_desc.xml" value="0.133" />
         <entry key="app/src/main/res/drawable/scrim.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.13269927536231885" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_weather_detail.xml" value="0.1578125" />
         <entry key="app/src/main/res/layout/content_scrolling.xml" value="0.15572916666666667" />
         <entry key="app/src/main/res/layout/item_weather.xml" value="0.1828125" />
       </map>

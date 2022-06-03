@@ -5,4 +5,6 @@
     <dimen name="top_margin">30dp</dimen>
     <dimen name="weather_title_size">50sp</dimen>
     <dimen name="img_margin_size">70dp</dimen>
+    <dimen name="bg_radius">6dp</dimen>
+    <dimen name="card_title_margin">30dp</dimen>
 </resources>

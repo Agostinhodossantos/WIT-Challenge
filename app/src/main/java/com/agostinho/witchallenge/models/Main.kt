@@ -10,4 +10,8 @@ data class Main(
     @Expose @SerializedName("temp_max") val tempMax: Double,
     @Expose @SerializedName("pressure") val pressure: Int,
     @Expose @SerializedName("humidity") val humidity: Int
-)
+) {
+    val getTempMax get() = "${this.tempMax.toInt()} °"
+    val getTempMin get() = "${this.tempMin.toInt()} °"
+    val getTemp get() = "${this.temp.toInt()} °"
+}

@@ -2,6 +2,7 @@ package com.agostinho.witchallenge.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
@@ -14,6 +15,8 @@ import com.agostinho.witchallenge.models.WeatherResult
 import com.agostinho.witchallenge.network.WeatherCityResponse
 import com.agostinho.witchallenge.ui.adapter.WeatherAdapter
 import com.agostinho.witchallenge.utils.DataState
+import com.agostinho.witchallenge.utils.getCurrentTime
+import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -26,7 +29,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -35,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         subscribeObserversMyCity()
         viewModel.setStateEvent(MainStateEvent.GetWeatherGroup)
         viewModel.setStateEvent(MainStateEvent.GetWeatherByCity)
+
     }
 
     private fun subscribeObserversMyCity() {
@@ -54,8 +57,15 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun displayCityWeather(data: WeatherCityResponse) {
-        Toast.makeText(this, "data $data", Toast.LENGTH_LONG).show()
+    private fun displayCityWeather(weather: WeatherCityResponse) {
+        binding.tvCity.text = weather.name
+        binding.tvTemp.text = weather.main.getTemp
+        binding.tvTime.text = "Hoje, ${getCurrentTime()}"
+
+        Glide
+            .with(this)
+            .load(weather.weather.get(0).getIconUrlLarge)
+            .into(binding.imgIcon)
 
     }
 
@@ -78,11 +88,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun displayError(message: String?) {
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+        if (message.isNullOrEmpty()) {
+            Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+        } else {
+            Toast.makeText(this, "Unknown error", Toast.LENGTH_LONG).show()
+        }
     }
 
-    private fun displayLoading(b: Boolean) {
-
+    private fun displayLoading(isLoading: Boolean) {
+        if (isLoading) {
+            binding.progressBar.visibility = View.VISIBLE
+        } else {
+            binding.progressBar.visibility = View.GONE
+        }
     }
 
     private fun populateRecyclerView(data: List<WeatherResult>) {
