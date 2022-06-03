@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/bg_desc.xml" value="0.133" />
         <entry key="app/src/main/res/drawable/scrim.xml" value="0.165" />
+        <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.15476190476190477" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_weather_detail.xml" value="0.1578125" />
         <entry key="app/src/main/res/layout/content_scrolling.xml" value="0.15572916666666667" />
