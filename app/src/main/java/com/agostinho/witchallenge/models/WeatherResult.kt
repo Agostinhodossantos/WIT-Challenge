@@ -1,8 +1,11 @@
 package com.agostinho.witchallenge.models
 
+import android.os.Parcelable
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class WeatherResult(
     @Expose @SerializedName("weather") val weather: List<Weather>,
     @Expose @SerializedName("main") val main: Main,
@@ -15,4 +18,4 @@ data class WeatherResult(
     @Expose @SerializedName("id") val id: Int,
     @Expose @SerializedName("name") val name: String,
     @Expose @SerializedName("visibility") val visibility: Int
-)
+) : Parcelable

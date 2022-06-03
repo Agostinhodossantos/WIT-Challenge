@@ -47,7 +47,7 @@ class  WeatherAdapter : ListAdapter<WeatherResult, WeatherAdapter.WeatherViewHol
 
         holder.binding.cardWeather.setOnClickListener {
             Intent(holder.binding.root.context, WeatherDetail::class.java).apply {
-                this.putExtra(WEATHER_INTENT, currentList[position].id)
+                this.putExtra(WEATHER_INTENT, currentList[position])
                 holder.binding.root.context.startActivity(this)
             }
         }

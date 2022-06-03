@@ -2,7 +2,10 @@ package com.agostinho.witchallenge.models
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
+import android.os.Parcelable
 
-data class Clouds (
-    @Expose @SerializedName("all") val all: String
-)
+@Parcelize
+data class Clouds(
+    @Expose @SerializedName("all") val all: Int
+) : Parcelable
